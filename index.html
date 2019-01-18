@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src = "js/jquery-3.3.1.js"></script>
+    <script src = "js/scripts.js"></script>
+    <meta charset="utf-8">
+    <title>Language Selector</title>
+  </head>
+  <body>
+    <div class = "container">
+      <div id = "headerContainer" class = "jumbotron">
+        <h1 class = "header">Epicodus Language Selector</h1>
+        <div class = "well" id = "php">
+          <h2>You should consider learning PHP!</h2>
+          <p></p>                                <!-- fill in p tags with descriptions-->
+        </div>
+        <div class = "well" id = "java">
+          <h2>You should consider learning Java!</h2>
+        </div>
+        <div class = "well" id = "c#">                      <!-- all these should be hidden at start -->
+          <h2>You should consider learning C#!</h2>
+        </div>
+        <div class = "well" id = "css">
+          <h2>You should consider learning CSS!</h2>
+        </div>                                         <!-- end hidden section-->
+      </div> <!-- end header container -->
+      <div id = "formDiv">
+        <form id ="myForm">
+          <div class = "form-group">
+            <label for "yourName">Please enter your name:</label><br>
+            <input id = "yourName" placeholder = "Your name" type = "text">
+          </div>
+          <div class = "radio">   <!--begin "technical language" -->
+            <h3>How do you feel about solving technical problems and writing extremely detailed instructions?</h3>
+            <label>
+              <input type = "radio" name = "technicalLanguage" id = "No">Technical stuff bogs me down and I can't understand it.
+            </label><br>
+            <label>
+              <input type = "radio" name = "technicalLanguage" id = "Yes">I love the technical stuff, lay it on me!
+            </label><br>
+          </div>                     <!-- end "technical language"-->
+          <div class = "radio">     <!-- begin "how challenging" -->
+            <h3>Are you looking for a major challenge?</h3>
+            <label>
+              <input type = "radio" name = "challengeLevel" id = "lowChallenge">I'd prefer to learn something that poses less of a challenge to see if programming is right for me first.
+            </label><br>
+            <label>
+              <input type = "radio" name = "challengeLevel" id = "medChallenge">I don't mind a challenge, but it's not really something I'm actively looking for.
+            </label><br>
+            <label>
+              <input type = "radio" name = "challengeLevel" id = "highChallenge">I like a challenge and I seek out things that are difficult to learn.
+            </label><br>
+          </div>                         <!-- end "how challenging" -->
+          <div class = "radio">      <!-- begin "eye for design" -->
+            <h3>Do you prefer to make things work or to make them look good?</h3>
+            <label>
+              <input type = "radio" name = "logicPreference" id = "design">I'm drawn more to design than anything.
+            </label><br>
+            <label>
+              <input type = "radio" name = "logicPreference" id = "logic">I'd rather make things <em>work</em> than decide what they look like.
+            </label><br>
+            <label>
+              <input type = "radio" name = "logicPreference" id = "both">I like both!
+            </label><br>
+          </div>       <!-- end "eye for design"-->
+          <div class = "radio">   <!--begin "size of company" -->
+            <h3>What size company do you envision yourself working for?</h3>
+            <label>
+              <input type = "radio" name = "" id = "largeFirm">I want to work at a large tech firm like Amazon or Microsoft.
+            </label><br>
+            <label>
+              <input type = "radio" name = "" id = "startup">I'd rather work for a startup.
+            </label><br>
+            <label>
+              <input type = "radio" name = "" id = "ownCompany">I plan to start my own company, I can't work for anybody but myself.
+            </label><br>
+          </div>      <!-- end "size of company"-->
+          <div class = "form-group">    <!-- begin type of program selector-->
+            <h3>What type of programs do you want to work on?</h3>
+              <select id = "typeOfPrograms">
+                <option value = "1">Games</option>
+                <option value = "2">Phone Apps</option>
+                <option value = "3">Websites</option>
+                <option value = "4">Backend development</option>
+                <option value = "5">A little of everything</option>
+              </select>
+          </div>
+          <a href = "#headerContainer"><button class = "btn" type = "submit" id = "submitForm">Show me what language I should learn!</button></a>
+        </form>
+      </div>
+    <div>
+  </body>
+</html>
