@@ -12,6 +12,7 @@
     <div class = "container">
       <div id = "headerContainer" class = "jumbotron">
         <h1 class = "header">Epicodus Language Selector</h1>
+        <p><span id ="fullStack"></span></p>
         <div class = "well" id = "php">
           <h2>You should consider learning PHP!</h2>
           <p></p>                                <!-- fill in p tags with descriptions-->
@@ -31,51 +32,68 @@
           <div class = "form-group">
             <label for "yourName">Please enter your name:</label><br>
             <input id = "yourName" placeholder = "Your name" type = "text">
-          </div>
           <div class = "radio">   <!--begin "technical language" -->
             <h3>How do you feel about solving technical problems and writing extremely detailed instructions?</h3>
             <label>
-              <input type = "radio" name = "technicalLanguage" id = "No">Technical stuff bogs me down and I can't understand it.
-            </label><br>
+              <input type = "radio" name = "technicalLanguage" id = "No"
+              value = "1">Technical stuff bogs me down and I can't understand it.
+            </label>
+          </div>
+          <div class = "radio">
             <label>
-              <input type = "radio" name = "technicalLanguage" id = "Yes">I love the technical stuff, lay it on me!
-            </label><br>
+              <input type = "radio" name = "technicalLanguage" id = "Yes" value = "2">I love the technical stuff, lay it on me!
+            </label>
           </div>                     <!-- end "technical language"-->
           <div class = "radio">     <!-- begin "how challenging" -->
             <h3>Are you looking for a major challenge?</h3>
             <label>
-              <input type = "radio" name = "challengeLevel" id = "lowChallenge">I'd prefer to learn something that poses less of a challenge to see if programming is right for me first.
-            </label><br>
+              <input type = "radio" name = "challengeLevel" id = "lowChallenge" value = "1">I'd prefer to learn something that poses less of a challenge to see if programming is right for me first.
+            </label>
+          </div>
+          <div class = "radio">
             <label>
-              <input type = "radio" name = "challengeLevel" id = "medChallenge">I don't mind a challenge, but it's not really something I'm actively looking for.
-            </label><br>
+              <input type = "radio" name = "challengeLevel" id = "medChallenge" value = "2">I don't mind a challenge, but it's not really something I'm actively looking for.
+            </label>
+          </div>
+          <div class = "radio">
             <label>
-              <input type = "radio" name = "challengeLevel" id = "highChallenge">I like a challenge and I seek out things that are difficult to learn.
-            </label><br>
-          </div>                         <!-- end "how challenging" -->
-          <div class = "radio">      <!-- begin "eye for design" -->
+              <input type = "radio" name = "challengeLevel" id = "highChallenge" value = "3">I like a challenge and I seek out things that are difficult to learn.
+            </label>
+          </div>
+          <div class = "radio">
+                                  <!-- end "how challenging" -->
+        </div>
+        <div class = "radio">  <!-- begin "eye for design" -->
             <h3>Do you prefer to make things work or to make them look good?</h3>
             <label>
-              <input type = "radio" name = "logicPreference" id = "design">I'm drawn more to design than anything.
-            </label><br>
+              <input type = "radio" name = "logicPreference" id = "design" value = "1">I'm drawn more to design than anything.
+            </label>
+          </div>
+          <div class = "radio">
             <label>
-              <input type = "radio" name = "logicPreference" id = "logic">I'd rather make things <em>work</em> than decide what they look like.
-            </label><br>
+              <input type = "radio" name = "logicPreference" id = "logic" value = "2">I'd rather make things <em>work</em> than decide what they look like.
+            </label>
+          </div>
+          <div class = "radio">
             <label>
-              <input type = "radio" name = "logicPreference" id = "both">I like both!
-            </label><br>
+              <input type = "radio" name = "logicPreference" id = "both" value ="3">I like both!
+            </label>
           </div>       <!-- end "eye for design"-->
           <div class = "radio">   <!--begin "size of company" -->
             <h3>What size company do you envision yourself working for?</h3>
             <label>
-              <input type = "radio" name = "" id = "largeFirm">I want to work at a large tech firm like Amazon or Microsoft.
-            </label><br>
+              <input type = "radio" name = "companySize" id = "largeFirm" value="1">I want to work at a large tech firm like Amazon or Microsoft.
+            </label>
+          </div>
+          <div class = "radio" value="2">
             <label>
-              <input type = "radio" name = "" id = "startup">I'd rather work for a startup.
-            </label><br>
+              <input type = "radio" name = "companySize" id = "startup" value="2">I'd rather work for a startup.
+            </label>
+          </div>
+          <div class = "radio">
             <label>
-              <input type = "radio" name = "" id = "ownCompany">I plan to start my own company, I can't work for anybody but myself.
-            </label><br>
+              <input type = "radio" name = "companySize" id = "ownCompany" value ="3">I plan to start my own company, I can't work for anybody but myself.
+            </label>
           </div>      <!-- end "size of company"-->
           <div class = "form-group">    <!-- begin type of program selector-->
             <h3>What type of programs do you want to work on?</h3>
