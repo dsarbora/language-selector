@@ -5,7 +5,8 @@ $(function(){ //start of ready function
   var cSharpCounter = 0;
 
   $("#myForm").submit(function(){
-
+    var missingFields = 0;
+    var name = $("#yourName").val();
     var technicalLanguage = $("input:radio[name=technicalLanguage]:checked").val();
     var challengeLevel = $("input:radio[name=challengeLevel]:checked").val();
     var logicPreference = $("input:radio[name=logicPreference]:checked").val();
@@ -22,7 +23,7 @@ $(function(){ //start of ready function
       phpCounter += 3;
     }
     else{
-      alert("Please fill all fields")
+      missingFields += 1
     }
 
     if(challengeLevel == 1) {         //low challenge
@@ -38,7 +39,7 @@ $(function(){ //start of ready function
       javaCounter += 5;
     }
     else{
-      alert("Please fill out all fields")
+      missingFields += 1
     };
 
     if(logicPreference == 1) {                //front-end
@@ -50,11 +51,10 @@ $(function(){ //start of ready function
       cSharpCounter += 5
     }
     else if(logicPreference == 3) {           //both
-      var fullStack = "Programming is a powerful tool for both front and back end. You should look into picking up a complementary language so you can work on both!";
-      $("#fullStack").text(fullStack);
+      console.log("What a pro")
     }
     else{
-      alert("Please fill out all fields")
+      missingFields += 1
     };
 
     if(companySize == 1) {        //large company
@@ -72,7 +72,7 @@ $(function(){ //start of ready function
       javaCounter += 4;
     }
     else {
-      alert("Please fill out all fields")
+      missingFields += 1
     };
 
     if(typeOfPrograms == 1) {                       //typeOfPrograms games
@@ -91,23 +91,35 @@ $(function(){ //start of ready function
       cSharpCounter += 5
     }
     else if(typeOfPrograms == 5) {    //Everything
-      alert("You wanna do it all, you're a pro!")
-    }
+      console.log("Renaissance person over here")
+        }
     else {
-      alert("Please fill out all fields")
+      missingFields += 1
     };
-
-    if(cssCounter >= phpCounter && cssCounter >= javaCounter && cssCounter >= cSharpCounter) {
+    if(missingFields == 1) {
+    alert("You didn't answer one of the questions")
+    }
+    else if(missingFields > 0) {
+      alert("Go back and answer the other " + missingFields + " questions!")
+    }
+    else if(missingFields == 5){
+      alert("You didn't answer a single question! Get your head in the game!")
+    }
+    else if(cssCounter >= phpCounter && cssCounter >= javaCounter && cssCounter >= cSharpCounter) {
       $("#css").show();
+      $("#myForm").hide();
     }
     else if(javaCounter >= cSharpCounter && javaCounter >= phpCounter) {
       $("#java").show();
+      $("#myForm").hide();
     }
     else if(cSharpCounter >= phpCounter) {
       $("#cSharp").show();
+      $("#myForm").hide();
     }
     else{
       $("#phpCounter").show();
+      $("#myForm").hide();
     }
 
     event.preventDefault();
