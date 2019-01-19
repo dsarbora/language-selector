@@ -5,17 +5,18 @@ $(function(){ //start of ready function
   var cSharpCounter = 0;
 
   $("#myForm").submit(function(){
-    debugger;
+
     var technicalLanguage = $("input:radio[name=technicalLanguage]:checked").val();
     var challengeLevel = $("input:radio[name=challengeLevel]:checked").val();
     var logicPreference = $("input:radio[name=logicPreference]:checked").val();
     var companySize = $("input:radio[name=companySize]:checked").val();
     var typeOfPrograms = $("#typeOfPrograms").val();
-    if(technicalLanguage == 1) {                        //technicalLanguage if 1, 2, else
+
+    if(technicalLanguage == 1) {         //low technical
       cssCounter += 5;
       phpCounter += 3
     }
-    else if(technicalLanguage == 2) {
+    else if(technicalLanguage == 2) {   //highly technical
       javaCounter += 5;
       cSharpCounter += 5;
       phpCounter += 3;
@@ -23,8 +24,8 @@ $(function(){ //start of ready function
     else{
       alert("Please fill all fields")
     }
-alert(cssCounter);
-    if(challengeLevel == 1) {                       //low challenge
+
+    if(challengeLevel == 1) {         //low challenge
       cssCounter += 5;
       phpCounter += 3;
     }
@@ -77,21 +78,39 @@ alert(cssCounter);
     if(typeOfPrograms == 1) {                       //typeOfPrograms games
       cSharpCounter += 5;
       phpCounter += 3;
-      
-
     }
     else if(typeOfPrograms == 2) {    //phone apps
+      javaCounter += 5
     }
     else if(typeOfPrograms == 3) {    //websites
+      cssCounter += 5
+      phpCounter += 5
     }
     else if(typeOfPrograms == 4) {    //backend development
+      javaCounter += 5
+      cSharpCounter += 5
     }
     else if(typeOfPrograms == 5) {    //Everything
+      alert("You wanna do it all, you're a pro!")
     }
     else {
       alert("Please fill out all fields")
     };
 
+    if(cssCounter >= phpCounter && cssCounter >= javaCounter && cssCounter >= cSharpCounter) {
+      $("#css").show();
+    }
+    else if(javaCounter >= cSharpCounter && javaCounter >= phpCounter) {
+      $("#java").show();
+    }
+    else if(cSharpCounter >= phpCounter) {
+      $("#cSharp").show();
+    }
+    else{
+      $("#phpCounter").show();
+    }
+
+    event.preventDefault();
 
   }); //end submit function
 }); //end of ready function

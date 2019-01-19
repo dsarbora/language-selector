@@ -1,6 +1,13 @@
-.well {
-  display: none;
+body{
+/*  background-color: #9f8d7d; */
+  color: black;
+  background: linear-gradient(200deg, #9f8d7d, #edd);
 }
+
+.well {
+display: none;
+}
+
 .form-group {
   margin-top: 50px;
 }
