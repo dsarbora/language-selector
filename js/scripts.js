@@ -5,6 +5,7 @@ $(function(){ //start of ready function
   var cSharpCounter = 0;
 
   $("#myForm").submit(function(){
+    debugger;
     var missingFields = 0;
     var name = $("#yourName").val();
     var technicalLanguage = $("input:radio[name=technicalLanguage]:checked").val();
@@ -120,6 +121,13 @@ $(function(){ //start of ready function
     else{
       $("#phpCounter").show();
       $("#myForm").hide();
+    };
+
+    if(name) {
+      $(".name").text(name + ", ");
+    }
+    else {
+      $(".name").text("Hey lazy,");
     }
 
     event.preventDefault();
